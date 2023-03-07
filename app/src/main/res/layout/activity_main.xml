@@ -88,9 +88,10 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
+                android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:text="Registrarse"
                 app:layout_constraintTop_toBottomOf="@id/btFB"
                 app:layout_constraintStart_toStartOf="parent"
