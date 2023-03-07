@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_register)
 
-        val tvRegister = findViewById<TextView>(R.id.tvRegister)
-        tvRegister.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity :: class.java))
+        val tvLogin = findViewById<TextView>(R.id.tvLogin)
+        tvLogin.setOnClickListener {
+            startActivity(Intent(this, MainActivity :: class.java))
         }
     }
 }
