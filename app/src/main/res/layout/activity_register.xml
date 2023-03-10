@@ -15,11 +15,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <pl.droidsonroids.gif.GifImageView
             android:layout_width="wrap_content"
             android:layout_height="225dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/discord"
+            android:src="@drawable/chat"
             app:shapeAppearanceOverlay="@style/circleImageView" />
     </LinearLayout>
 
@@ -46,15 +46,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textColorHint="@color/hintColor">
+                android:textColorHint="@color/hintColor" >
 
                <EditText
                     android:id="@+id/User"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="Usuario"
-                   android:background="@drawable/roundtoggle"
-                    android:ems="10"/>
+                    android:background="@drawable/roundtoggle"
+                    android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tilUser"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColorHint="@color/hintColor">
+                android:textColorHint="@color/hintColor" >
 
                 <EditText
                     android:id="@+id/etName"
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Nombre"
                     android:background="@drawable/roundtoggle"
-                    android:ems="10"/>
+                    android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +84,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tilName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColorHint="@color/hintColor">
+                android:textColorHint="@color/hintColor" >
 
                 <EditText
                     android:id="@+id/etLastName"
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Apellido"
                     android:background="@drawable/roundtoggle"
-                    android:ems="10"/>
+                    android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -104,7 +104,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tilLName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColorHint="@color/hintColor">
+                android:textColorHint="@color/hintColor" >
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -129,7 +129,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tilEmail"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColorHint="@color/hintColor">
+                android:textColorHint="@color/hintColor" >
 
                 <EditText
                     android:id="@+id/etUsername"
