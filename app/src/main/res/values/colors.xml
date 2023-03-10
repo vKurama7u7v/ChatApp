@@ -7,5 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bnColor">#e11d48</color>
+    <color name="bnColor">#be185d</color>
+    <color name="bckColor">#FFF1DC</color>
+    <color name="hintColor">#65647C</color>
 </resources>
