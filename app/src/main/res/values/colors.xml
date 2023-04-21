@@ -12,4 +12,5 @@
     <color name="hintColor">#65647C</color>
     <color name="crdColorTrns">#be185d</color>
     <color name="crdColorRcvr">#831843</color>
+    <color name="msgTxtColor">#FFF4E0</color>
 </resources>
