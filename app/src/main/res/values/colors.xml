@@ -9,8 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bnColor">#be185d</color>
     <color name="bckColor">#FFF1DC</color>
-    <color name="hintColor">#65647C</color>
+    <color name="hintColor">#898989</color>
     <color name="crdColorTrns">#be185d</color>
     <color name="crdColorRcvr">#831843</color>
     <color name="msgTxtColor">#FFF4E0</color>
+    <color name="bgPrimary">#1F1C1F</color>
+    <color name="bgSecondary">#272427</color>
+    <color name="overlay">#A61F1C1F</color>
+    <color name="primary">#F34663</color>
+    <color name="text">#C1C1C1</color>
 </resources>

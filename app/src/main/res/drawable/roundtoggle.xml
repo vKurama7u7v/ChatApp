@@ -4,8 +4,8 @@
     <size android:height="45dp" />
     <corners android:radius="5dp" />
     <stroke
-        android:color="#6b7280"
-        android:width="0.25dp">
+        android:color="@color/hintColor"
+        android:width="1dp">
     </stroke>
     <padding
         android:left="15dp">
