@@ -58,6 +58,7 @@
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:hint="Correo Electrónico"
+                    android:textColor="@color/black"
                     android:inputType="textEmailAddress"
                     android:background="@drawable/roundtoggle" />
 
@@ -76,7 +77,7 @@
                 android:textColorHint="#65647C" >
 
                 <EditText
-                    android:id="@+id/etUsername"
+                    android:id="@+id/etPassword"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -84,6 +85,7 @@
                     android:ems="10"
                     android:inputType="textPassword"
                     android:hint="Contraseña"
+                    android:textColor="@color/black"
                     android:background="@drawable/roundtoggle" />
 
             </com.google.android.material.textfield.TextInputLayout>

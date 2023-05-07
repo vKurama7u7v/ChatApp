@@ -53,6 +53,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="Usuario"
+                   android:textColor="@color/black"
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -72,6 +73,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="Nombre"
+                    android:textColor="@color/black"
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -91,6 +93,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="Apellido"
+                    android:textColor="@color/black"
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,6 +117,7 @@
                     android:layout_centerVertical="true"
                     android:inputType="textEmailAddress"
                     android:hint="Correo Electrónico"
+                    android:textColor="@color/black"
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
 
@@ -132,12 +136,13 @@
                 android:textColorHint="@color/hintColor" >
 
                 <EditText
-                    android:id="@+id/etUsername"
+                    android:id="@+id/etPassword"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
                     android:hint="Contraseña"
+                    android:textColor="@color/black"
                     android:background="@drawable/roundtoggle" />
 
             </com.google.android.material.textfield.TextInputLayout>
