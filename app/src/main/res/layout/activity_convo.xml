@@ -26,26 +26,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:gravity="center_vertical">
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="128dp"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="asñldkfnaslñdkfnalsdkfnjalsdkfnañsdofgmañdsfkgsdñfgkmsdñflkgmsñdlfkgmsñdlfkgmdñsfgm"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@color/primary"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/SectionRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="asñldkfnaslñdkfnalsdkfnjalsdkfnañsdofgmañdsfkgsdñfgkmsdñflkgmsñdlfkgmsñdlfkgmdñsfgm"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:background="@color/primary"
+                />
+        </RelativeLayout>
+
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/bgPrimary"
+        android:padding="8dp"
+        >
 
         <EditText
             android:id="@+id/etConvo"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="68dp"
             android:background="@drawable/roundtoggle"
             android:ems="10"
-            android:hint="Correo Electrónivco"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:hint="Escribe un mensaje"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttons"
+            android:text="Send"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
