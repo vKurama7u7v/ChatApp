@@ -18,4 +18,5 @@
     <color name="overlay">#A61F1C1F</color>
     <color name="primary">#F34663</color>
     <color name="text">#C1C1C1</color>
+    <color name="transparent">#00000000</color>
 </resources>

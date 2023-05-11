@@ -1,6 +1,7 @@
 package com.example.chatapp
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.chatapp.adapters.CollectionAdapter
 import com.example.chatapp.adapters.PagerAdapter
 import com.example.chatapp.databinding.ActivityViewBinding
+import com.example.chatapp.fragments.Chats
+import com.example.chatapp.fragments.Friends
+import com.example.chatapp.fragments.Settings
 import com.google.android.material.tabs.TabLayout
 
 class ViewActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,6 +26,9 @@ class ViewActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btnFriends: ImageView
     private lateinit var btnSettings: ImageView
 
+    // Data
+    private var user = ""
+
     /*
     var tabs: TabLayout? = null
     var viewPager: ViewPager2? = null
@@ -32,38 +39,44 @@ class ViewActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicializar Vistas
-        inicializarVistas()
+        intent.getStringExtra("user")?.let { user = it }
 
-        // Asignar Eventos
-        asignarEventos()
+        if(user.isNotEmpty()){
+            Log.d("DATOS", user)
 
-        // Adapter
-        pvAdapter = PagerAdapter(supportFragmentManager)
-        myViewPager.adapter = pvAdapter
-        myViewPager.offscreenPageLimit = 3 // <- Cambiar el limite de las tabs
+            // Inicializar Vistas
+            inicializarVistas()
 
-        myViewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-                //TODO("Not yet implemented")
-            }
+            // Asignar Eventos
+            asignarEventos()
 
-            override fun onPageSelected(position: Int) {
-                //TODO("Not yet implemented")
-                onChangeTab(position)
-            }
+            // Adapter
+            pvAdapter = PagerAdapter(supportFragmentManager)
+            myViewPager.adapter = pvAdapter
+            myViewPager.offscreenPageLimit = 3 // <- Cambiar el limite de las tabs
 
-            override fun onPageScrollStateChanged(state: Int) {
-                //TODO("Not yet implemented")
-            }
-        })
+            myViewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
+                    //TODO("Not yet implemented")
+                }
 
-        myViewPager.currentItem = 0
-        btnChats.setImageResource(R.drawable.baseline_chat_bubble_outline_active)
+                override fun onPageSelected(position: Int) {
+                    //TODO("Not yet implemented")
+                    onChangeTab(position)
+                }
+
+                override fun onPageScrollStateChanged(state: Int) {
+                    //TODO("Not yet implemented")
+                }
+            })
+
+            myViewPager.currentItem = 0
+            btnChats.setImageResource(R.drawable.baseline_chat_bubble_outline_active)
+        }
 
         /*
         tabs = findViewById(R.id.tabs)
@@ -124,13 +137,17 @@ class ViewActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onChangeTab(position: Int) {
-
+        val bundle = Bundle()
+        //val transaccion = supportFragmentManager.beginTransaction()
+        bundle.putString("user", "Aurelio")
         // Falta cambiar color
-
         if (position == 0) {
             btnChats.setImageResource(R.drawable.baseline_chat_bubble_outline_active)
             btnFriends.setImageResource(R.drawable.baseline_person_outline)
             btnSettings.setImageResource(R.drawable.baseline_settings)
+
+            val chat = Chats()
+            chat.arguments = bundle
         }
 
         if (position == 1) {
