@@ -14,14 +14,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.activities.ChatActivity
 import com.example.chatapp.adapters.ChatAdapter
 import com.example.chatapp.models.Chat
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class ListOfChats : AppCompatActivity(), View.OnClickListener {
+    private val auth = Firebase.auth
     private lateinit var btnNavChats: ImageView
     private lateinit var btnNavFriends: ImageView
-    private lateinit var btnNavSettings: ImageView
+    private lateinit var btnlogout: ImageView
 
     private lateinit var btnNewChat: ImageButton
     private lateinit var etNewChat: EditText
@@ -48,7 +50,7 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
     private fun initViews(){
         btnNavChats = findViewById(R.id.btnNavChats)
         btnNavFriends = findViewById(R.id.btnNavFriends)
-        btnNavSettings = findViewById(R.id.btnNavSettings)
+        btnlogout = findViewById(R.id.btnlogout)
 
         btnNewChat = findViewById(R.id.newChatButton)
         etNewChat = findViewById(R.id.newChatText)
@@ -81,7 +83,7 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
     private fun asignarEventos(){
         btnNavChats.setOnClickListener(this)
         btnNavFriends.setOnClickListener(this)
-        btnNavSettings.setOnClickListener(this)
+        btnlogout.setOnClickListener(this)
         btnNewChat.setOnClickListener(this)
     }
 
@@ -93,6 +95,9 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
             R.id.newChatButton -> {
                 if(email.isEmpty()) Toast.makeText(this, "El campo esta vacio", Toast.LENGTH_SHORT).show()
                 else newChat()
+            }
+            R.id.btnlogout -> {
+                logout()
             }
         }
     }
@@ -126,4 +131,13 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
         intent.putExtra("user", user)
         startActivity(intent)
     }
+
+    private fun logout(){
+        auth.signOut()
+        val s = Intent(this, MainActivity::class.java)
+        startActivity(s)
+        finish()
+        Toast.makeText(this, "Cerrando sesión", Toast.LENGTH_LONG).show()
+    }
+
 }
