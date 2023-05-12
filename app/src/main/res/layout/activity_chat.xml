@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.ChatActivity"
-    android:background="@drawable/arizona">
+    android:background="@drawable/bg">
 
     <RelativeLayout
         android:id="@+id/RelativeLayoutSendMsg"
@@ -34,7 +34,9 @@
             android:id="@+id/sendMessageButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/buttons"
+            android:src="@drawable/btn_send"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
