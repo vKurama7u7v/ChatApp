@@ -31,6 +31,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         bnLogin.setOnClickListener(this)
+        //A
     }
 
     private fun inicializarVistas() {

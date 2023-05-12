@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 else {
                     login()
+                    //B
                 }
             }
         }
