@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="crear_cuenta">Create Account</string>
+    <string name="user">Username</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Lastname</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Login">Register</string>
+    <string name="tienes_cuenta">Already have an accout?</string>
+    <string name="iniciar_sesi_n">Login</string>
+    <string name="SC_login">Login</string>
+    <string name="SC_email">Email</string>
+    <string name="SC_password">Password</string>
+    <string name="SC_loginbtn">Login</string>
+    <string name="NO_acc">Don\'t have an account?</string>
+    <string name="SC_Register">Register</string>
+    <string name="escribe_mensaje">Write your message</string>
+    <string name="buscar_chat">Search Chat</string>
+    <string name="friends">Friends</string>
+    <string name="settings">Settings</string>
+    <string name="AChat_escribemsg">Write your message</string>
+</resources>

@@ -20,7 +20,7 @@
                 android:id="@+id/newChatText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Buscar Chat"
+                android:hint="@string/buscar_chat"
                 app:layout_constraintEnd_toStartOf="@+id/newChatButton"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/quicksand_medium"
-                android:text="Friends"
+                android:text="@string/friends"
                 android:textColor="@color/text"/>
         </RelativeLayout>
 
@@ -138,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/quicksand_medium"
-                android:text="Settings"
+                android:text="@string/settings"
                 android:textColor="@color/text"/>
         </RelativeLayout>
     </LinearLayout>
