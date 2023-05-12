@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         val user = auth.currentUser
 
         if (user != null){
-            val s = Intent(this, ViewActivity::class.java)
+            val s = Intent(this, ListOfChats::class.java)
             s.putExtra("user", user.email)
             startActivity(s)
 
