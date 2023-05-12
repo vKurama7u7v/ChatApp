@@ -38,11 +38,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun inicializarVistas() {
-        val etEmail = findViewById<EditText>(R.id.etEmail)
-        val etPassword = findViewById<EditText>(R.id.etPassword)
-        val bnLogin = findViewById<Button>(R.id.btLogin)
-
-
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        bnLogin = findViewById(R.id.btLogin)
     }
 
     private fun login(){
