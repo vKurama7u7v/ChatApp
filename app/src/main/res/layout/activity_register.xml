@@ -38,6 +38,7 @@
                 android:textSize="32dp"
                 android:textStyle="bold"/>
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUser"
                 android:layout_width="match_parent"
@@ -57,7 +58,9 @@
                     android:textColorHint="@color/text"
                     android:textColor="@color/text" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilName"
                 android:layout_width="match_parent"
@@ -78,7 +81,9 @@
                     android:textColorHint="@color/text"
                     android:textColor="@color/text" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilLName"
                 android:layout_width="match_parent"
@@ -97,6 +102,7 @@
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEmail"

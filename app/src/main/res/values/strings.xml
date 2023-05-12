@@ -20,6 +20,6 @@
     <string name="escribe_mensaje">Escribe un mensaje</string>
     <string name="buscar_chat">Buscar Chat</string>
     <string name="settings">Configuración</string>
-    <string name="AChat_escribemsg">Escribe Mensaje</string>
+    <string name="AChat_escribemsg">Escribe tu Mensaje</string>
     <string name="friends">Amigos</string>
 </resources>
