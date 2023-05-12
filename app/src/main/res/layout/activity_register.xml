@@ -32,12 +32,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Crear Cuenta"
+                android:text="@string/crear_cuenta"
                 android:textAlignment="center"
                 android:textColor="@color/primary"
                 android:textSize="32dp"
                 android:textStyle="bold"/>
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUser"
                 android:layout_width="match_parent"
@@ -53,11 +54,13 @@
                     android:background="@drawable/roundtoggle"
                     android:ems="10"
                     android:fontFamily="@font/quicksand_medium"
-                    android:hint="Usuario"
+                    android:hint="@string/user"
                     android:textColorHint="@color/text"
                     android:textColor="@color/text" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilName"
                 android:layout_width="match_parent"
@@ -74,11 +77,13 @@
                     android:background="@drawable/roundtoggle"
                     android:ems="10"
                     android:fontFamily="@font/quicksand_medium"
-                    android:hint="Nombre"
+                    android:hint="@string/nombre"
                     android:textColorHint="@color/text"
                     android:textColor="@color/text" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
+            <!--
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilLName"
                 android:layout_width="match_parent"
@@ -90,13 +95,14 @@
                     android:id="@+id/etLastName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Apellido"
+                    android:hint="@string/apellido"
                     android:textColorHint="@color/text"
                     android:textColor="@color/text"
                     android:fontFamily="@font/quicksand_medium"
                     android:background="@drawable/roundtoggle"
                     android:ems="10" />
             </com.google.android.material.textfield.TextInputLayout>
+            -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEmail"
@@ -112,7 +118,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:inputType="textEmailAddress"
-                    android:hint="Correo Electrónico"
+                    android:hint="@string/email"
                     android:textColorHint="@color/text"
                     android:textColor="@color/text"
                     android:fontFamily="@font/quicksand_medium"
@@ -136,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:hint="Contraseña"
+                    android:hint="@string/password"
                     android:textColorHint="@color/text"
                     android:textColor="@color/text"
                     android:fontFamily="@font/quicksand_medium"
@@ -150,7 +156,7 @@
                 android:fontFamily="@font/quicksand_bold"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
-                android:text="Registrarse"
+                android:text="@string/Login"
                 android:background="@drawable/buttons"/>
 
             <LinearLayout
@@ -165,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_medium"
-                    android:text="¿Ya tienes una cuenta?"
+                    android:text="@string/tienes_cuenta"
                     android:textColor="@color/text" />
 
                 <TextView
@@ -174,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_bold"
-                    android:text="Iniciar Sesión"
+                    android:text="@string/iniciar_sesi_n"
                     android:textColor="@color/primary" />
 
             </LinearLayout>

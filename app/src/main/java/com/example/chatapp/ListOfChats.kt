@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.activities.ChatActivity
@@ -86,9 +87,12 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         //TODO("Not yet implemented")
+        val email = etNewChat.text.toString()
+
         when(p0?.id){
             R.id.newChatButton -> {
-                newChat()
+                if(email.isEmpty()) Toast.makeText(this, "El campo esta vacio", Toast.LENGTH_SHORT).show()
+                else newChat()
             }
         }
     }
@@ -107,13 +111,15 @@ class ListOfChats : AppCompatActivity(), View.OnClickListener {
 
         val chat = Chat(
             id = chatId,
-            name = "Chat con $otherUser",
+            name = "$otherUser",
             users = users
         )
 
         db.collection("chats").document(chatId).set(chat)
         db.collection("users").document(user).collection("chats").document(chatId).set(chat)
         db.collection("users").document(otherUser).collection("chats").document(chatId).set(chat)
+
+        etNewChat.setText("")
 
         val intent = Intent(this, ChatActivity::class.java)
         intent.putExtra("chatId", chatId)

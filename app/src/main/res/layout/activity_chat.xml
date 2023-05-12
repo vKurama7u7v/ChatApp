@@ -4,32 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ChatActivity">
+    tools:context=".activities.ChatActivity"
+    android:background="@drawable/arizona">
 
-    <EditText
-        android:id="@+id/messageTextField"
-        android:layout_width="0dp"
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutSendMsg"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="Escribe Mensaje"
-        android:inputType="textPersonName"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/bgPrimary"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sendMessageButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        >
+        <EditText
+            android:id="@+id/messageTextField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="58dp"
+            android:background="@drawable/roundtoggle"
+            android:ems="10"
+            android:hint="@string/AChat_escribemsg"
+            android:inputType="textAutoComplete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sendMessageButton"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/sendMessageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <ImageButton
+            android:id="@+id/sendMessageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/buttons"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagesRecylerView"
@@ -41,7 +50,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/messageTextField"
+        app:layout_constraintBottom_toTopOf="@+id/RelativeLayoutSendMsg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

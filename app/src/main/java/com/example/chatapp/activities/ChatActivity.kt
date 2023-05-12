@@ -2,8 +2,11 @@ package com.example.chatapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.R
@@ -13,12 +16,12 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class ChatActivity : AppCompatActivity() {
+class ChatActivity : AppCompatActivity(), View.OnClickListener {
     private var chatId = ""
     private var user = ""
 
     private lateinit var messageTextField: EditText
-    private lateinit var sendMessageButton: Button
+    private lateinit var sendMessageButton: ImageButton
 
     private lateinit var messagesRecylerView: RecyclerView
     private lateinit var layoutManager: RecyclerView.LayoutManager
@@ -45,7 +48,7 @@ class ChatActivity : AppCompatActivity() {
         messagesRecylerView.layoutManager = LinearLayoutManager(this)
         messagesRecylerView.adapter = MessageAdapter(user)
 
-        sendMessageButton.setOnClickListener { sendMessage() }
+        sendMessageButton.setOnClickListener(this)
 
         val chatRef = db.collection("chats").document(chatId)
 
@@ -75,5 +78,17 @@ class ChatActivity : AppCompatActivity() {
 
         db.collection("chats").document(chatId).collection("messages").document().set(message)
         messageTextField.setText("")
+    }
+
+    override fun onClick(p0: View?) {
+        //TODO("Not yet implemented")
+        val message = messageTextField.text.toString()
+
+        when(p0?.id){
+            R.id.sendMessageButton -> {
+                if(message.isEmpty()) Toast.makeText(this, "El campo esta vacio", Toast.LENGTH_SHORT).show()
+                else sendMessage()
+            }
+        }
     }
 }
