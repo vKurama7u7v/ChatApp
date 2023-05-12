@@ -3,6 +3,8 @@ package com.example.chatapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -10,31 +12,40 @@ import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private val auth = Firebase.auth
+
+    private lateinit var etEmail : EditText
+    private lateinit var etPassword : EditText
+    private lateinit var bnLogin : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        inicializarVistas()
 
         val tvRegister = findViewById<TextView>(R.id.tvRegister)
         tvRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity :: class.java))
         }
 
-        val bnLogin = findViewById<Button>(R.id.btLogin)
-        bnLogin.setOnClickListener {
-            login()
-        }
+        bnLogin.setOnClickListener(this)
 
         checkuser()
 
     }
 
-    private fun login(){
+    private fun inicializarVistas() {
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
+        val bnLogin = findViewById<Button>(R.id.btLogin)
+
+
+    }
+
+    private fun login(){
 
         val email = etEmail.text.toString()
         val password = etPassword.text.toString()
@@ -59,6 +70,24 @@ class MainActivity : AppCompatActivity() {
             startActivity(s)
 
             finish()
+        }
+    }
+
+    override fun onClick(p0: View?) {
+        //TODO("Not yet implemented")
+
+        val Email = etEmail.text.toString()
+        val Password = etPassword.text.toString()
+
+        when(p0?.id) {
+            R.id.btLogin -> {
+                if (Email.isEmpty() && Password.isEmpty()) {
+                    Toast.makeText(this, "Campos vacios", Toast.LENGTH_SHORT).show()
+                }
+                else {
+                    login()
+                }
+            }
         }
     }
 
